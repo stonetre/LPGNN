@@ -27,7 +27,7 @@ python main.py
 Please wait patiently for the program to finish running.
 
 ## Result
-Note: The original paper is not designed for traffic flow prediction, but performs well on the traffic flow dataset.
+Note: The Model is not designed for traffic flow prediction, but performs well on the traffic flow dataset.
 
 | **Dataset**        | **METR-LA** |       |       | **PEMS-BAY** |       |       |
 |--------------------|-------------|-------|-------|--------------|-------|-------|
