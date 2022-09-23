@@ -28,21 +28,21 @@ Please wait patiently for the program to finish running.
 
 ## Result
 Note: The Model is not designed for traffic flow prediction, but performs well on the traffic flow dataset.
-Baseline code: [STGCN](https://github.com/VeritasYin/STGCN_IJCAI-18)
-[DCRNN](https://github.com/liyaguang/DCRNN)
-[MTGNN](https://github.com/nnzhan/MTGNN)
-[GMAN](https://github.com/zhengchuanpan/GMAN)
-[STGNN](https://github.com/LMissher/STGNN)
-[GTS](https://github.com/chaoshangcs/GTS)
-[Ada-STNet](https://github.com/LiuZH-19/Ada-STNet)
-[STFGNN](https://github.com/MengzhangLI/STFGNN)
-[GraphWaveNet](https://github.com/SGT-LIM/GraphWavenet)
-[ASTGCN](https://github.com/Davidham3/ASTGCN)
-[STSGCN](https://github.com/Davidham3/STSGCN)
-[AGCRN](https://github.com/LeiBAI/AGCRN)
-[Z-GCNETs](https://github.com/Z-GCNETs/Z-GCNETs)
-[DSTAGNN](https://github.com/SYLan2019/DSTAGNN)
-[STG-NCDE](https://github.com/jeongwhanchoi/STG-NCDE)
+Baseline code: [STGCN](https://github.com/VeritasYin/STGCN_IJCAI-18),
+[DCRNN](https://github.com/liyaguang/DCRNN),
+[MTGNN](https://github.com/nnzhan/MTGNN),
+[GMAN](https://github.com/zhengchuanpan/GMAN),
+[STGNN](https://github.com/LMissher/STGNN),
+[GTS](https://github.com/chaoshangcs/GTS),
+[Ada-STNet](https://github.com/LiuZH-19/Ada-STNet),
+[STFGNN](https://github.com/MengzhangLI/STFGNN),
+[GraphWaveNet](https://github.com/SGT-LIM/GraphWavenet),
+[ASTGCN](https://github.com/Davidham3/ASTGCN),
+[STSGCN](https://github.com/Davidham3/STSGCN),
+[AGCRN](https://github.com/LeiBAI/AGCRN),
+[Z-GCNETs](https://github.com/Z-GCNETs/Z-GCNETs),
+[DSTAGNN](https://github.com/SYLan2019/DSTAGNN),
+[STG-NCDE](https://github.com/jeongwhanchoi/STG-NCDE).
 
 | **Dataset**        | **METR-LA** |       |       | **PEMS-BAY** |       |       |
 |--------------------|-------------|-------|-------|--------------|-------|-------|
