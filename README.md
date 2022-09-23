@@ -27,7 +27,7 @@ python main.py
 Please wait patiently for the program to finish running.
 
 ## Result
-| **Dataset**        | **METR-LA**                 | **PEMS-BAY** | ****  | ****  |
+| **Dataset**        | **METR-LA** |       |       | **PEMS-BAY** | ****  | ****  |
 |--------------------|-------------|-------|-------|--------------|-------|-------|
 | **Baseline**       | MAE         | MAPE  | RMSE  | MAE          | MAPE  | RMSE  |
 | **STGCN**          | 4.45        | 11.8  | 8.41  | 2.49         | 5.69  | 5.79  |
