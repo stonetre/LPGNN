@@ -221,7 +221,7 @@ def train(train_data, valid_data, test_data, args, result_file):
     valid_mape = []
     test_mae = []
     train_graph = 0
-    # position_embd = torch.zeros(args.batch_size, args.lhgcn_out_dim, args.num_nodes, args.position_emb_dim).to(device)    #[32, 32, 210, 2]
+    # position_embd = torch.zeros(args.batch_size, args.lhgcn_out_dim, args.num_nodes, args.position_emb_dim).to(device)    
     position_embd = torch.ones(args.batch_size, args.lhgcn_out_dim, args.num_nodes, args.position_emb_dim).to(device)
     #position_embd = torch.rand((args.num_nodes, args.position_emb_dim)).to(device)
     # print(position_embd)
@@ -251,7 +251,7 @@ def train(train_data, valid_data, test_data, args, result_file):
             Graph_adj.masked_fill_(mask, 0)
         elif args.graph_learning_metric == 1:
             Bgraph = torch.mean(position_embd,dim=1)
-            Bgraph = torch.mean(Bgraph,dim=0)  #torch.Size([210, 2])
+            Bgraph = torch.mean(Bgraph,dim=0)  
             Graph_adj = torch.norm(Bgraph[:,None]-Bgraph, dim=2,p=2)
             Graph_adj = activeF(Graph_adj)
             Graph_adj = torch.where(Graph_adj < args.rewiring_distance, 1.0, 0.0)
@@ -288,7 +288,7 @@ def train(train_data, valid_data, test_data, args, result_file):
             graphshow(graph, epoch, result_file, 0.04)
         if args.model_save:
             print('model saved!!!')
-            save_model(model, position_embd_learned, result_file, epoch)  # 训练时每一epoch保存一次模型
+            save_model(model, position_embd_learned, result_file, epoch)  
         
         print('| end of epoch {:3d} | time: {:5.2f}s | train_total_loss {:5.4f} | graph total edges: {}'.format(epoch, (
                 time.time() - epoch_start_time), loss_total / cnt, int(np.mean(graphedge))))
