@@ -29,7 +29,7 @@ Please wait patiently for the program to finish running.
 ## Result
 | **Dataset**        | **METR-LA** |       |       | **PEMS-BAY** |       |       |
 |--------------------|-------------|-------|-------|--------------|-------|-------|
-| **Baseline**       | MAE         | MAPE  | RMSE  | MAE          | MAPE  | RMSE  |
+| **Baseline**       | MAE         | MAPE(%)  | RMSE  | MAE          | MAPE(%)  | RMSE  |
 | **STGCN**          | 4.45        | 11.8  | 8.41  | 2.49         | 5.69  | 5.79  |
 | **DCRNN**          | 3.6         | 10.5  | 7.59  | 2.07         | 4.74  | 4.9   |
 | **MTGNN**          | 3.49        | 9.87  | 7.23  | 1.94         | 4.53  | 4.49  |
@@ -41,7 +41,7 @@ Please wait patiently for the program to finish running.
 | **ours**           | 3.16        | 8.83  | 6.38  | 1.64         | 3.68  | 3.72  |
 |                    |             |       |       |              |       |       |
 | **Dataset**        | **PEMSD4**  |       |       | **PEMSD8**   |       |       |
-| **Baseline**       | MAE         | MAPE  | RMSE  | MAE          | MAPE  | RMSE  |
+| **Baseline**       | MAE         | MAPE(%)  | RMSE  | MAE          | MAPE(%)  | RMSE  |
 | **STGCN**          | 21.16       | 13.83 | 35.69 | 17.5         | 11.29 | 27.09 |
 | **DCRNN**          | 21.22       | 14.17 | 37.23 | 16.82        | 10.92 | 26.36 |
 | **GraphWaveNet**   | 28.15       | 18.52 | 39.88 | 20.3         | 13.84 | 30.82 |
