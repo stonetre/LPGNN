@@ -136,9 +136,9 @@ class TemporalConvNet(nn.Module):
         layers = []
         num_levels = len(num_channels)
         for i in range(num_levels):
-            dilation_size = 2 ** i   # 膨胀系数：1，2，4，8……
-            in_channels = num_inputs if i == 0 else num_channels[i-1]  # 确定每一层的输入通道数
-            out_channels = num_channels[i]  # 确定每一层的输出通道数
+            dilation_size = 2 ** i  
+            in_channels = num_inputs if i == 0 else num_channels[i-1]  
+            out_channels = num_channels[i] 
             layers += [TemporalBlock(in_channels, out_channels, kernel_size, stride=1, dilation=dilation_size,
                                      padding=(kernel_size-1) * dilation_size, dropout=dropout)]
 
@@ -372,8 +372,7 @@ class HLGCN(nn.Module):
 
         out1 = self.last_temporal(out1).permute(0,2,1,3)
         out1 = out1.reshape((out1.shape[0], out1.shape[1], -1))
-        # out3 : [50, 307, 64]
-        #print(out1.shape) #4:64 3:128 2:192
+
         out1 = self.fc(out1)      
         return out1.permute(0, 2, 1), adj, Bgraph
 
