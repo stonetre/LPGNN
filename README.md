@@ -27,6 +27,8 @@ python main.py
 Please wait patiently for the program to finish running.
 
 ## Result
+Note: The original paper is not designed for traffic flow prediction, but performs well on the traffic flow dataset.
+
 | **Dataset**        | **METR-LA** |       |       | **PEMS-BAY** |       |       |
 |--------------------|-------------|-------|-------|--------------|-------|-------|
 | **Baseline**       | MAE         |MAPE(%)| RMSE  | MAE          |MAPE(%)| RMSE  |
