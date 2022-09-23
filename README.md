@@ -26,3 +26,4 @@ python main.py
 ```
 Please wait patiently for the program to finish running.
 ## Citation
+Please do not repurpose our code until our paper is accepted.
