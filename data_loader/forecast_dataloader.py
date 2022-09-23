@@ -18,7 +18,7 @@ def normalized(data, normalize_method, norm_statistic=None, normalize_column=Fal
             if normalize_column:
                 norm_statistic = dict(mean=np.mean(data, axis=0), std=np.std(data, axis=0))
             else:
-                norm_statistic = dict(mean=np.mean(data), std=np.std(data)) #不执行
+                norm_statistic = dict(mean=np.mean(data), std=np.std(data)) 
         mean = norm_statistic['mean']
         std = norm_statistic['std']
         #std = [1 if i == 0 else i for i in std]
@@ -42,7 +42,7 @@ def de_normalized(data, normalize_method, norm_statistic, normalize_column=False
             if normalize_column:
                 norm_statistic = dict(mean=np.mean(data, axis=0), std=np.std(data, axis=0))
             else:
-                norm_statistic = dict(mean=np.mean(data), std=np.std(data)) #不执行
+                norm_statistic = dict(mean=np.mean(data), std=np.std(data)) 
         mean = norm_statistic['mean']
         std = norm_statistic['std']
         #std = [1 if i == 0 else i for i in std]
@@ -68,8 +68,6 @@ class ForecastDataset(torch_data.Dataset):
         if normalize_method:
             self.data, _ = normalized(self.data, normalize_method, norm_statistic, normalize_column)
 
-    # 让 ForecastDataset类可以迭代
-    # 滑窗
     def __getitem__(self, index):
         hi = self.x_end_idx[index]
         lo = hi - self.window_size
@@ -88,5 +86,5 @@ class ForecastDataset(torch_data.Dataset):
         x_index_set = range(self.window_size, self.df_length - self.horizon + 1)
         # x_index_set
         x_end_idx = [x_index_set[j * self.interval] for j in range((len(x_index_set)) // self.interval)]
-        # x_end_idx 为行索引，间隔为self.interval
+
         return x_end_idx
