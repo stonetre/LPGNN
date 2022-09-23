@@ -27,7 +27,7 @@ python main.py
 Please wait patiently for the program to finish running.
 
 ## Result
-| **Dataset**        | **METR-LA** |       |       | **PEMS-BAY** | ****  | ****  |
+| **Dataset**        | **METR-LA** |       |       | **PEMS-BAY** |       |       |
 |--------------------|-------------|-------|-------|--------------|-------|-------|
 | **Baseline**       | MAE         | MAPE  | RMSE  | MAE          | MAPE  | RMSE  |
 | **STGCN**          | 4.45        | 11.8  | 8.41  | 2.49         | 5.69  | 5.79  |
@@ -40,7 +40,7 @@ Please wait patiently for the program to finish running.
 | **STFGNN(SOTA)**   | 3.18        | 8.81  | 6.4   | 1.66         | 3.77  | 3.74  |
 | **ours**           | 3.16        | 8.83  | 6.38  | 1.64         | 3.68  | 3.72  |
 |--------------------|-------------|-------|-------|--------------|-------|-------|
-| **Dataset**        | PEMD4       |       |       | PEMD8        |       |       |
+| **Dataset**        | **PEMD4**   |       |       | **PEMD8  **  |       |       |
 | **Baseline**       | MAE         | MAPE  | RMSE  | MAE          | MAPE  | RMSE  |
 | **STGCN**          | 21.16       | 13.83 | 35.69 | 17.5         | 11.29 | 27.09 |
 | **DCRNN**          | 21.22       | 14.17 | 37.23 | 16.82        | 10.92 | 26.36 |
