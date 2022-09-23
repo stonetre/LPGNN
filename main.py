@@ -72,7 +72,6 @@ parser.add_argument('--use_padding', type=eval, default=config['model']['use_pad
 parser.add_argument('--hlgcn_block_layers', type=int, default=config['model']['hlgcn_block_layers']) 
 parser.add_argument('--TimeBlock_kernel', type=int, default=config['model']['TimeBlock_kernel']) 
 
-# 创建文件路径
 args = parser.parse_args()
 print(f'Training configs: {args}')
 data_file = os.path.join('dataset', args.dataset + '.csv')
@@ -85,7 +84,6 @@ if not os.path.exists(result_test_file):
     os.makedirs(result_test_file)
 data = pd.read_csv(data_file).values
 
-# 划分数据集
 train_ratio = args.train_length / (args.train_length + args.valid_length + args.test_length)
 valid_ratio = args.valid_length / (args.train_length + args.valid_length + args.test_length)
 test_ratio = 1 - train_ratio - valid_ratio
