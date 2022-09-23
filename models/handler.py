@@ -224,8 +224,6 @@ def train(train_data, valid_data, test_data, args, result_file):
     # position_embd = torch.zeros(args.batch_size, args.lhgcn_out_dim, args.num_nodes, args.position_emb_dim).to(device)    
     position_embd = torch.ones(args.batch_size, args.lhgcn_out_dim, args.num_nodes, args.position_emb_dim).to(device)
     #position_embd = torch.rand((args.num_nodes, args.position_emb_dim)).to(device)
-    # print(position_embd)
-    # exit()
 
     for epoch in range(args.epoch):
         epoch_start_time = time.time()
