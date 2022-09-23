@@ -14,7 +14,7 @@ This is a Pytorch implementation.
 - networkx>=2.6.3
 
 ## Data Preparation
-Our traffic flow dataset has been placed in the dataset folder of the code. You need to unzip the dataset to this folder first. 
+The traffic flow dataset has been placed in the dataset folder of the code. You need to unzip the dataset to this folder first. 
 METR-LA and PEMS-BAY source and original paper of [DCRNN](https://github.com/liyaguang/DCRNN). 
 PEMSD4 and PEMSD8 come from the paper [ASTGCN](https://github.com/Davidham3/ASTGCN)
 
@@ -24,5 +24,5 @@ You need to first specify the dataset name in main.py and then directly to run
 ```bash
 python main.py
 ```
-
+Please wait patiently for the program to finish running.
 ## Citation
