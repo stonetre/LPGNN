@@ -226,11 +226,9 @@ class STGM_Block(nn.Module):
                                 layers=GLU_Linear_TCN_layers,timeblock_padding=timeblock_padding)
         self.dropout = nn.Dropout(dropout_rate, inplace=True)
         self.batch_norm = nn.BatchNorm2d(num_nodes)
+        
     def forward(self, X, Lfilter, Hfilter):
-        # X : [32, 1, 307, 24]
         res = self.skipConv(X)
-        #print(res.shape)
-        # t : [50, 32, 307, 22] 
         out = X
         skip_list = []
         for i in range(self.GLU_HLGCN_blocks_layers):
@@ -239,7 +237,7 @@ class STGM_Block(nn.Module):
             out = self.GLU_HLGCN_blocks[i*2+1](out,Lfilter, Hfilter)
             out = self.dropout(out)
         res = res[:,:,:,res.shape[3]-out.shape[3]:res.shape[3]]
-        #out = F.relu(res + out)
+        
         out = self.batch_norm((res + out).permute(0,2,1,3)).permute(0,2,1,3)
         return out, skip_list
 
@@ -336,14 +334,13 @@ class HLGCN(nn.Module):
 
 
     def forward(self, X, Graph_adj, position_embed):
-        # X : 32 , 12, 30
+        
         X = X.permute(0, 2, 1) 
         X = torch.unsqueeze(X, dim=1)
-        # X : [50, 1, 307, 24]
         Lfilter, Hfilter, adj  = self.HLfilter_construct_module(Graph_adj)
         skip=[]
         stgmskip_cach=[]      
-        out1 = self.start_conv(X)  #[32, 32, 210, 30]
+        out1 = self.start_conv(X)  
         out1 = torch.cat([out1,position_embed],dim=3)
 
         for i in range(self.STGM_block_layers):
